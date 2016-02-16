@@ -90,7 +90,7 @@ public class FrameSOAP extends javax.swing.JFrame {
         Object[] message = {
             "Productos:", new JList(nombres),
         };
-        JOptionPane.showMessageDialog(this, message, "Insertar producto.", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, message, "Productos.", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
