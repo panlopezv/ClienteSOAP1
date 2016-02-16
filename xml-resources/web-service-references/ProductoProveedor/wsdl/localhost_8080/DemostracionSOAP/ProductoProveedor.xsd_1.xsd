@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://producto/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://producto/">
+
+<xs:element name="getProducto" type="tns:getProducto"/>
+
+<xs:element name="getProductoResponse" type="tns:getProductoResponse"/>
+
+<xs:element name="getProductos" type="tns:getProductos"/>
+
+<xs:element name="getProductosResponse" type="tns:getProductosResponse"/>
+
+<xs:element name="getProveedor" type="tns:getProveedor"/>
+
+<xs:element name="getProveedorResponse" type="tns:getProveedorResponse"/>
+
+<xs:element name="getProveedores" type="tns:getProveedores"/>
+
+<xs:element name="getProveedoresResponse" type="tns:getProveedoresResponse"/>
+
+<xs:element name="insertarProducto" type="tns:insertarProducto"/>
+
+<xs:element name="insertarProductoResponse" type="tns:insertarProductoResponse"/>
+
+<xs:element name="insertarProveedor" type="tns:insertarProveedor"/>
+
+<xs:element name="insertarProveedorResponse" type="tns:insertarProveedorResponse"/>
+
+<xs:element name="productos" type="tns:productos"/>
+
+<xs:element name="proveedores" type="tns:proveedores"/>
+
+<xs:complexType name="getProveedor">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getProveedorResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:proveedores" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="proveedores">
+<xs:sequence>
+<xs:element name="direccion" type="xs:string" minOccurs="0"/>
+<xs:element name="idProveedor" type="xs:int" minOccurs="0"/>
+<xs:element name="nit" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="productosid" type="xs:int"/>
+<xs:element name="telefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarProveedor">
+<xs:sequence>
+<xs:element name="nit" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="direccion" type="xs:string" minOccurs="0"/>
+<xs:element name="telefono" type="xs:string" minOccurs="0"/>
+<xs:element name="productos_id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarProveedorResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getProducto">
+<xs:sequence>
+<xs:element name="id" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getProductoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:productos" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="productos">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getProveedores">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getProveedoresResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:proveedores" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarProducto">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarProductoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getProductos">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getProductosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:productos" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
